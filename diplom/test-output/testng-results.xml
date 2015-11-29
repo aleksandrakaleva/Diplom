@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11590" started-at="2015-11-29T15:38:04Z" finished-at="2015-11-29T15:38:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11590" started-at="2015-11-29T15:38:04Z" finished-at="2015-11-29T15:38:16Z">
+      <class name="com.diplom.AddressTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.diplom.AddressTest@2ed94a8b]" name="init" is-config="true" duration-ms="8528" started-at="2015-11-29T17:38:04Z" finished-at="2015-11-29T17:38:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testAddNewAddress(com.diplom.model.Address)[pri:0, instance:com.diplom.AddressTest@2ed94a8b]" name="testAddNewAddress" duration-ms="2962" started-at="2015-11-29T17:38:13Z" data-provider="newAddressData" finished-at="2015-11-29T17:38:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.diplom.model.Address@3aefae67]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewAddress -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:com.diplom.AddressTest@2ed94a8b]" name="stop" is-config="true" duration-ms="1842" started-at="2015-11-29T17:38:16Z" finished-at="2015-11-29T17:38:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stop -->
+      </class> <!-- com.diplom.AddressTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
