@@ -21,6 +21,7 @@ public class ApplicationManager {
 	
 	private NavigationHelper navigationHelper;
 	private AddressHelper addressHelper;
+	private GroupHelper groupsHelper;
 	
 	public Faker faker = new Faker();
 	public User baseUser = new User();
@@ -46,11 +47,16 @@ public class ApplicationManager {
 	    
 	    navigationHelper = new NavigationHelper(this);
 	    addressHelper = new AddressHelper(this);
+	    groupsHelper = new GroupHelper(this);
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    getNavigationHelper().openHomePage();
 	    addressHelper.pages.internalPage.waitPageLoaded();
 	    
+	}
+	
+	public GroupHelper getGroupHelper(){
+		return groupsHelper;
 	}
 	
 	public AddressHelper getAddressHelper(){

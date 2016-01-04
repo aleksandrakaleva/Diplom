@@ -10,12 +10,16 @@ public class PageManager {
 	public HomePage homePage;
 	public InternalPage internalPage;
 	public AddAddressPage addAddressPage;
+	public GroupsPage groupsPage;
+	public AddGroupPage addGroupPage;
 	
 	public PageManager(WebDriver driver){
 		this.driver = driver;
 		homePage = initElements(new HomePage(this));
 		internalPage = initElements(new InternalPage(this));
 		addAddressPage = initElements(new AddAddressPage(this));
+		groupsPage = initElements(new GroupsPage(this));
+		addGroupPage = initElements(new AddGroupPage(this));
 	}
 	
 	private <T extends Page> T initElements(T page) {
