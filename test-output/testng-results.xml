@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="AllTest" duration-ms="8836" started-at="2016-01-07T08:54:05Z" finished-at="2016-01-07T08:54:13Z">
+    <groups>
+    </groups>
+    <test name="AllTest" duration-ms="8836" started-at="2016-01-07T08:54:05Z" finished-at="2016-01-07T08:54:13Z">
+      <class name="com.diplom.GroupTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.diplom.GroupTest@3b81a1bc]" name="init" is-config="true" duration-ms="279" started-at="2016-01-07T10:54:12Z" finished-at="2016-01-07T10:54:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testAddNewGroup(com.diplom.model.Group)[pri:0, instance:com.diplom.GroupTest@3b81a1bc]" name="testAddNewGroup" duration-ms="908" started-at="2016-01-07T10:54:13Z" data-provider="newGroupData" finished-at="2016-01-07T10:54:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.diplom.model.Group@61514735]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewGroup -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:com.diplom.GroupTest@3b81a1bc]" name="stop" is-config="true" duration-ms="1652" started-at="2016-01-07T10:54:14Z" finished-at="2016-01-07T10:54:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stop -->
+      </class> <!-- com.diplom.GroupTest -->
+      <class name="com.diplom.AddressTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.diplom.AddressTest@4cb2c100]" name="init" is-config="true" duration-ms="5495" started-at="2016-01-07T10:54:05Z" finished-at="2016-01-07T10:54:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testAddNewAddress(com.diplom.model.Address)[pri:0, instance:com.diplom.AddressTest@4cb2c100]" name="testAddNewAddress" duration-ms="2044" started-at="2016-01-07T10:54:10Z" data-provider="newAddressData" finished-at="2016-01-07T10:54:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.diplom.model.Address@66908383]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewAddress -->
+      </class> <!-- com.diplom.AddressTest -->
+    </test> <!-- AllTest -->
+  </suite> <!-- AllTest -->
+</testng-results>
