@@ -2,11 +2,9 @@ package com.diplom.applogic;
 
 import org.openqa.selenium.By;
 
-import junit.framework.Assert;
 import ru.yandex.qatools.allure.annotations.Step;
 
 import com.diplom.model.Address;
-import com.thoughtworks.selenium.webdriven.commands.IsElementPresent;
 
 public class AddressHelper extends DriverBasedHelper{
 
