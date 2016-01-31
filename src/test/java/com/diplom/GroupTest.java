@@ -18,7 +18,25 @@ public class GroupTest extends TestBase{
 	 @Description("Тест создания группы")
 	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
 	 public void testAddNewGroup(Group group){
-		 app.getGroupHelper().createNewGroup(group);
+		 app.getGroupHelper()
+		 	.createNewGroup(group);
+	 }
+	 
+	 @Title("Тест редактирования группы")
+	 @Description("Тест редактирования группы")
+	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	 public void testUpdateGroup(Group editGroup, Group group){
+		 app.getGroupHelper()
+		 	.updateGroup(editGroup, group);
+	 }
+	 
+
+	 @Title("Тест удаления группы")
+	 @Description("Тест удаления группы")
+	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	 public void testDeleteGroup(Group group){
+		 app.getGroupHelper()
+		 	.deleteGroup(group);
 	 }
 
 }

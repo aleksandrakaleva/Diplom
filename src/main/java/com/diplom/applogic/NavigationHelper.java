@@ -39,6 +39,13 @@ public class NavigationHelper extends DriverBasedHelper{
 		pages.addAddressPage
 			.waitPageLoaded();
 	}
+	
+	public void openGroupsPage(){
+		pages.internalPage
+			.clickMenuGroups();
+		pages.groupsPage
+			.waitPageLoaded();
+	}
 
 	
 	

@@ -24,6 +24,8 @@ public class GroupsPage extends InternalPage{
 	
 	public void clickNewGroupButton(){
 		newGroupButton.click();
+		pages.addGroupPage
+			.waitPageLoaded();
 	}
 	
 	

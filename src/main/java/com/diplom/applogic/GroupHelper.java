@@ -15,24 +15,28 @@ public class GroupHelper extends DriverBasedHelper{
 	
 	@Step("Создание новой группы")
 	public void createNewGroup(Group group){
-		pages.internalPage
-			.clickMenuGroups();
-		pages.groupsPage
-			.ensurePageLoaded();
+		manager.getNavigationHelper()
+			.openGroupsPage();
 		pages.groupsPage
 			.clickNewGroupButton();
-		pages.addGroupPage
-			.ensurePageLoaded();
 		pages.addGroupPage.setGroupNameField(group.getGroupName())
 			.setGroupHeaderField(group.getGroupHeader())
 			.setGroupFooterFieldField(group.getGroupFooter())
 			.clickSubmitButton();
-		
-		pages.internalPage.clickMenuGroups();
-		pages.groupsPage
-			.ensurePageLoaded();
+		manager.getNavigationHelper()
+			.openGroupsPage();
 		org.testng.Assert.assertTrue(pages.homePage.isElementPresent(By
 				.xpath("//*[text() = '"+group.getGroupName()+"']")));
+
+	}
+	
+	@Step("Редактирование группы")
+	public void updateGroup(Group editGroup, Group group){
+
+	}
+	
+	@Step("Удаление группы")
+	public void deleteGroup(Group group){
 
 	}
 
