@@ -62,6 +62,12 @@ public class AddAddressPage extends InternalPage{
 	@FindBy(name = "submit")
 	public Button submitButton;
 	
+	@FindBy(xpath = "//form[@action = 'edit.php']/*[@name = 'update']")
+	public Button updateButton;
+	
+	@FindBy(xpath = "//form[@action = 'delete.php']/*[@name = 'update']")
+	public Button deleteButton;
+	
 	@Step("Заполнить поле FirstName значением {0}" )
 	public AddAddressPage setFirtNameField(String text){
 		firtNameField.clearAndType(text);
@@ -125,6 +131,14 @@ public class AddAddressPage extends InternalPage{
 	
 	public void clickSubmitButton(){
 		submitButton.click();
+	}
+	
+	public void clickUpdateButton(){
+		updateButton.click();
+	}
+	
+	public void clickDeleteButton(){
+		deleteButton.click();
 	}
 	
 	

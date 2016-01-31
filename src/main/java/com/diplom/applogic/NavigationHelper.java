@@ -21,11 +21,23 @@ public class NavigationHelper extends DriverBasedHelper{
 		this.baseUrl = manager.getBaseUrl();
 	}
 	
-	/**
-	 * Метод открывает страницу авторизации
-	 */
 	public void openHomePage(){
 		driver.get(baseUrl);
+	}
+	
+	public void openListAdressPage(){
+		pages.internalPage
+			.clickMenuHome();
+		pages.homePage
+			.waitPageLoaded();
+	}
+	
+	
+	public void openAddAdressPage(){
+		pages.internalPage
+			.clickMenuAddNew();
+		pages.addAddressPage
+			.waitPageLoaded();
 	}
 
 	

@@ -16,7 +16,24 @@ public class AddressTest extends TestBase {
   @Description("Тест создания адресса")
   @Test(dataProviderClass = GeneratorDataAddress.class, dataProvider = "newAddressData")
   public void testAddNewAddress(Address address){
-	  app.getAddressHelper().createNewAddress(address); 
+	  app.getAddressHelper()
+	  	.createNewAddress(address); 
+  }
+  
+  @Title("Тест редактирования адресса")
+  @Description("Тест редактирования адресса")
+  @Test(dataProviderClass = GeneratorDataAddress.class, dataProvider = "newAddressData")
+  public void testUpdateAddress(Address editAddress, Address address){
+	  app.getAddressHelper()
+	  	.updateAddress(editAddress, address);
+  }
+  
+  @Title("Тест удаления адресса")
+  @Description("Тест удаления адресса")
+  @Test(dataProviderClass = GeneratorDataAddress.class, dataProvider = "newAddressData")
+  public void testDeleteAddress(Address address){
+	  app.getAddressHelper()
+	  	.deleteAddress(address); 
   }
   
 
