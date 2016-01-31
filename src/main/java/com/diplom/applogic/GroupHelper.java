@@ -32,12 +32,29 @@ public class GroupHelper extends DriverBasedHelper{
 	
 	@Step("Редактирование группы")
 	public void updateGroup(Group editGroup, Group group){
-
+		manager.getNavigationHelper()
+			.openGroupsPage();
+		pages.groupsPage
+			.selectGroupCheckbox(editGroup.getGroupName())
+			.clickEditGroupButton();
+		pages.addGroupPage.setGroupNameField(group.getGroupName())
+			.setGroupHeaderField(group.getGroupHeader())
+			.setGroupFooterFieldField(group.getGroupFooter())
+			.clickSubmitButton();
+		manager.getNavigationHelper()
+			.openGroupsPage();
+		org.testng.Assert.assertTrue(pages.homePage.isElementPresent(By
+			.xpath("//*[text() = '"+group.getGroupName()+"']")));
+		
 	}
 	
 	@Step("Удаление группы")
 	public void deleteGroup(Group group){
-
+		manager.getNavigationHelper()
+			.openGroupsPage();
+		pages.groupsPage
+			.selectGroupCheckbox(group.getGroupName())
+			.clickDeleteGroupButton();
 	}
 
 }

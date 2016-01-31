@@ -68,7 +68,7 @@ public class AddAddressPage extends InternalPage{
 	@FindBy(xpath = "//form[@action = 'delete.php']/*[@name = 'update']")
 	public Button deleteButton;
 	
-	@Step("Заполнить поле FirstName значением {0}" )
+	@Step("Заполнить поле FirstName значением {0}")
 	public AddAddressPage setFirtNameField(String text){
 		firtNameField.clearAndType(text);
 		return this;
