@@ -9,8 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-
-import com.diplom.model.User;
 import com.diplom.util.PropertyLoader;
 import com.github.javafaker.Faker;
 
@@ -24,7 +22,6 @@ public class ApplicationManager {
 	private GroupHelper groupsHelper;
 	
 	public Faker faker = new Faker();
-	public User baseUser = new User();
 	
 	private WebDriver driver;
 	private static String gridHubUrl;
@@ -32,16 +29,12 @@ public class ApplicationManager {
 	private static Capabilities capabilities;
 	
 	public ApplicationManager() throws IOException{
-		baseUser.setEmail("fbfumboi@10mail.org")
-				.setPassword("123456789a");
 		baseUrl = PropertyLoader.loadProperty("site.url");
 	    gridHubUrl = PropertyLoader.loadProperty("grid.url");
 	    if ("".equals(gridHubUrl)) {
 	      gridHubUrl = null;
 	    }
 	    capabilities = PropertyLoader.loadCapabilities();
-	    
-	    //WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
 	    
 	    driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
 	    
