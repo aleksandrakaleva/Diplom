@@ -21,8 +21,6 @@ public class ApplicationManager {
 	private AddressHelper addressHelper;
 	private GroupHelper groupsHelper;
 	
-	public Faker faker = new Faker();
-	
 	private WebDriver driver;
 	private static String gridHubUrl;
 	private static String baseUrl;

@@ -13,15 +13,15 @@ public class TestBase {
 	
 	protected ApplicationManager app;
 
-  @BeforeClass
-  public void init() throws IOException {
-	  app = new ApplicationManager();
-  }
+	@BeforeClass
+	public void init() throws IOException {
+		app = new ApplicationManager();
+	}
   
   
-  @AfterSuite
-  public void stop(){
-	  app.stop();
-  }
+	@AfterSuite
+	public void stop(){
+		app.stop();
+	}
   
 }
