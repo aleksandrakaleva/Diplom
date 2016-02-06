@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import ru.yandex.qatools.allure.annotations.Step;
 
 import com.diplom.model.Address;
+import com.diplom.model.Group;
 
 public class AddressHelper extends DriverBasedHelper{
 
@@ -74,5 +75,17 @@ public class AddressHelper extends DriverBasedHelper{
 			.clickDeleteButton();
 
 	}
-
+	@Step("Добавление адресса в группу")
+	public void addAddress(Address address){
+		manager.getNavigationHelper()
+		.openListAdressPage();
+	pages.homePage
+		.selectAddress(address.getFirstName())
+		.settoGroupSelect(address.getGroups())
+		.clickToAddButton();
+	
+	}
+	   
+	
 }
+	

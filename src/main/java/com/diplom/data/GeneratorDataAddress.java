@@ -61,5 +61,14 @@ public class GeneratorDataAddress {
 		list.add(new Object[]{address});
 		return list.iterator();
 	}
+	@DataProvider(name = "addAddressData")
+	public static Iterator<Object[]> addAddressDataGenerate(){
+		List<Object[]> list = new ArrayList<Object[]>();
+		Address address = new Address();
+		address.setFirstName("Смирнов")
+			.setGroups("Суворовский район");
+		list.add(new Object[]{address});
+		return list.iterator();
+	}
 
 }
