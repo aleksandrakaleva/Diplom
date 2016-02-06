@@ -43,30 +43,37 @@ public class InternalPage extends Page{
 	@FindBy(xpath = "//a[@href = 'csv.php'")
 	private Button menuExportCsv;
 	
+	@Step("Нажать меню Home")
 	public void clickMenuHome(){
 		wait.until(ExpectedConditions.visibilityOf(menuHome)).click();
 	}
 	
+	@Step("Нажать меню add new")
 	public void clickMenuAddNew(){
 		menuAddNew.click();
 	}
 	
+	@Step("Нажать меню groups")
 	public void clickMenuGroups(){
 		menuGroups.click();
 	}
 	
+	@Step("Нажать меню next birthdays")
 	public void clickMenuNextBirthdays(){
 		menuNextBirthdays.click();
 	}
 	
+	@Step("Нажать меню print all")
 	public void clickMenuPrintAll(){
 		menuPrintAll.click();
 	}
 	
+	@Step("Нажать меню print phones")
 	public void clickMenuPrintPhones(){
 		menuPrintPhones.click();
 	}
 	
+	@Step("Нажать меню export csv")
 	public void clickMenuExportCsv(){
 		menuExportCsv.click();
 	}

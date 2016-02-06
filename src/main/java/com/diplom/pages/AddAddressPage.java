@@ -62,70 +62,97 @@ public class AddAddressPage extends InternalPage{
 	@FindBy(name = "submit")
 	public Button submitButton;
 	
-	@Step("Заполнить поле FirstName значением {0}" )
+	@FindBy(xpath = "//form[@action = 'edit.php']/*[@name = 'update']")
+	public Button updateButton;
+	
+	@FindBy(xpath = "//form[@action = 'delete.php']/*[@name = 'update']")
+	public Button deleteButton;
+	
+	@Step("Заполнить поле FirstName значением {0}")
 	public AddAddressPage setFirtNameField(String text){
 		firtNameField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Last name значением {0}")
 	public AddAddressPage setLastNameField(String text){
 		lastNameField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Address значением {0}")
 	public AddAddressPage setAddressField(String text){
 		addressField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Telephone Home значением {0}")
 	public AddAddressPage setHomeTelephoneField(String text){
 		homeTelephoneField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Telephone Mobile значением {0}")
 	public AddAddressPage setMobileTelephoneField(String text){
 		mobileTelephoneField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Telephone Work значением {0}")
 	public AddAddressPage setWorkTelephoneField(String text){
 		workTelephoneField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Email значением {0}")
 	public AddAddressPage setEmailField(String text){
 		emailField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Email2 значением {0}")
 	public AddAddressPage setEmail2Field(String text){
 		email2Field.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Day значением {0}")
 	public AddAddressPage setBdayField(String text){
 		bdayField.select(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Month значением {0}")
 	public AddAddressPage setBmonthField(String text){
 		bmonthField.select(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Year значением {0}")
 	public AddAddressPage setByearField(String text){
 		byearField.clearAndType(text);
 		return this;
 	}
 	
+	@Step("Заполнить поле Group значением {0}")
 	public AddAddressPage setGroupField(String text){
 		groupField.select(text);
 		return this;
 	}
 	
+	@Step("Нажать кнопку Enter")
 	public void clickSubmitButton(){
 		submitButton.click();
 	}
 	
+	@Step("Нажать кнопку Update")
+	public void clickUpdateButton(){
+		updateButton.click();
+	}
+	
+	@Step("Нажать кнопку Delete")
+	public void clickDeleteButton(){
+		deleteButton.click();
+	}
 	
 }

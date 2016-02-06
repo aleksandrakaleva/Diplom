@@ -19,76 +19,75 @@ import com.diplom.elements.CustomFieldDecorator;
 
 public abstract class Page {
 
-  protected WebDriver driver;
-  protected WebDriverWait wait;
-  protected PageManager pages;
+	protected WebDriver driver;
+	  protected WebDriverWait wait;
+	  protected PageManager pages;
 
 
-  public Page(PageManager pages) {
-    this.pages = pages;
-    driver = pages.getWebDriver();
-    wait = new WebDriverWait(driver, 5);
-    PageFactory.initElements(new CustomFieldDecorator(driver), this);
-  }
-  
-  public WebDriver getWebDriver(){
-	  return driver;
-  }
-
-  public String getTitle() {
-    return driver.getTitle();
-  }
-  
-  public Page ensurePageLoaded(){
-	  return this;
-  }
-  
-  public boolean waitPageLoaded(){
-	  try {
-		  ensurePageLoaded();
-		  return true;
-		
-	  } catch (TimeoutException to) {
-		return false;
+	  public Page(PageManager pages) {
+	    this.pages = pages;
+	    driver = pages.getWebDriver();
+	    wait = new WebDriverWait(driver, 5);
+	    PageFactory.initElements(new CustomFieldDecorator(driver), this);
 	  }
 	  
-  }
-  
-  public void scrollPage(int position){
-	  String js = String.format("window.scroll(0, %s)", position);
-	  ((JavascriptExecutor)driver).executeScript(js);
-	  
-  }
-  
-  public boolean isElementPresent(By locator) {
-		try {
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-			return true;
-		} catch (WebDriverException e) {
-			return false;
-		}
-  }
-  
-  public boolean isNotElementPresent(WebDriver driver, By locator) {
-		try {
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
-			return true;
-		} catch (WebDriverException e) {
-			return false;
-		}
-  }
-  
-  public boolean isElementPresent(WebElement webElement) {
-		try {
-			webElement.isDisplayed();
-			return true;
-		} catch (WebDriverException e) {
-			return false;
-		}
-  }
+	  public WebDriver getWebDriver(){
+		  return driver;
+	  }
 
+	  public String getTitle() {
+	    return driver.getTitle();
+	  }
+	  
+	  public Page ensurePageLoaded(){
+		  return this;
+	  }
+	  
+	  public boolean waitPageLoaded(){
+		  try {
+			  ensurePageLoaded();
+			  return true;
+			
+		  } catch (TimeoutException to) {
+			return false;
+		  }
+		  
+	  }
+	  
+	  public void scrollPage(int position){
+		  String js = String.format("window.scroll(0, %s)", position);
+		  ((JavascriptExecutor)driver).executeScript(js);
+		  
+	  }
+	  
+	  public boolean isElementPresent(By locator) {
+			try {
+				driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+				return true;
+			} catch (WebDriverException e) {
+				return false;
+			}
+	  }
+	  
+	  public boolean isNotElementPresent(WebDriver driver, By locator) {
+			try {
+				driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+				return true;
+			} catch (WebDriverException e) {
+				return false;
+			}
+	  }
+	  
+	  public boolean isElementPresent(WebElement webElement) {
+			try {
+				webElement.isDisplayed();
+				return true;
+			} catch (WebDriverException e) {
+				return false;
+			}
+	  }
   
 
  

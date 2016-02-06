@@ -25,10 +25,16 @@ public class HomePage extends InternalPage{
 	@FindBy(name = "searchstring")
 	private TextField searchField;
 	
-	@Step("Ввод значения {0} в поле сабдомен")
-	public HomePage setSubdomainField(String text) {
+	@Step("Ввод значения {0} в поле Поиска")
+	public HomePage setSearchField(String text) {
 		searchField.clearAndType(text);
 		return this;
+	}
+	
+	@Step("Нажать на кнопку редактирования на контакте со сзначением {0}")
+	public void clickEditButton(String text) {
+		driver.findElement(By.xpath("")).click();
+		pages.addAddressPage.waitPageLoaded();
 	}
 	
 
