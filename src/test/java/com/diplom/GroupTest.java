@@ -13,6 +13,8 @@ import ru.yandex.qatools.allure.annotations.Title;
 @Title("Тесты групп")
 @Description("Тесты групп")
 public class GroupTest extends TestBase{
+	
+	
 	 @Title("Тест создания группы")
 	 @Description("Тест создания группы")
 	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")

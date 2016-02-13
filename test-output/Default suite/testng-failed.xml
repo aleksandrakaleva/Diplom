@@ -6,7 +6,9 @@
       <class name="com.diplom.AddressTest">
         <methods>
           <include name="testAddNewAddress" invocation-numbers="0"/>
+          <include name="testUpdateAddress"/>
           <include name="init"/>
+          <include name="testDeleteAddress" invocation-numbers="0"/>
           <include name="stop"/>
         </methods>
       </class> <!-- com.diplom.AddressTest -->

@@ -3,6 +3,8 @@ package com.diplom.applogic;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import ru.yandex.qatools.allure.annotations.Step;
+
 /**
  * 
  * Класс отвечающий за навигацию по проекту
@@ -25,6 +27,7 @@ private String baseUrl;
 		driver.get(baseUrl);
 	}
 	
+	@Step("Нажать на меню Home")
 	public void openListAdressPage(){
 		pages.internalPage
 			.clickMenuHome();
@@ -32,19 +35,20 @@ private String baseUrl;
 			.waitPageLoaded();
 	}
 	
-	
+	@Step("Нажать на меню Add New")
 	public void openAddAdressPage(){
 		pages.internalPage
 			.clickMenuAddNew();
 		pages.addAddressPage
-			.waitPageLoaded();
+			.ensurePageLoaded();
 	}
 	
+	@Step("Нажать на меню Groups")
 	public void openGroupsPage(){
 		pages.internalPage
 			.clickMenuGroups();
 		pages.groupsPage
-			.waitPageLoaded();
+			.ensurePageLoaded();
 	}
 
 
