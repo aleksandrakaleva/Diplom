@@ -6,11 +6,16 @@
       <class name="com.diplom.AddressTest">
         <methods>
           <include name="testAddNewAddress"/>
+          <include name="testUpdateAddress"/>
+          <include name="testDeleteAddress"/>
+          <include name="testAddAddressToGroup"/>
         </methods>
       </class>
       <class name="com.diplom.GroupTest">
         <methods>
           <include name="testAddNewGroup"/>
+          <include name="testUpdateGroup"/>
+          <include name="testDeleteGroup"/>
         </methods>
       </class>    
     </classes>

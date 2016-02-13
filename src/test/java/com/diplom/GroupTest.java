@@ -15,29 +15,29 @@ import ru.yandex.qatools.allure.annotations.Title;
 public class GroupTest extends TestBase{
 	
 	
-	 @Title("Тест создания группы")
-	 @Description("Тест создания группы")
-	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
-	 public void testAddNewGroup(Group group){
-		 app.getGroupHelper()
-		 	.createNewGroup(group);
-	 }
+	@Title("Тест создания группы")
+	@Description("Тест создания группы")
+	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	public void testAddNewGroup(Group group){
+		app.getGroupHelper()
+			.createNewGroup(group);
+	}
 	 
-	 @Title("Тест редактирования группы")
-	 @Description("Тест редактирования группы")
-	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
-	 public void testUpdateGroup(Group editGroup, Group group){
-		 app.getGroupHelper()
-		 	.updateGroup(editGroup, group);
-	 }
+	@Title("Тест редактирования группы")
+	@Description("Тест редактирования группы")
+	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	public void testUpdateGroup(Group editGroup, Group group){
+		app.getGroupHelper()
+			.updateGroup(editGroup, group);
+	}
 	 
 
-	 @Title("Тест удаления группы")
-	 @Description("Тест удаления группы")
-	 @Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
-	 public void testDeleteGroup(Group group){
-		 app.getGroupHelper()
-		 	.deleteGroup(group);
-	 }
+	@Title("Тест удаления группы")
+	@Description("Тест удаления группы")
+	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	public void testDeleteGroup(Group group){
+		app.getGroupHelper()
+			.deleteGroup(group);
+	}
 
 }

@@ -78,11 +78,11 @@ public class AddressHelper extends DriverBasedHelper{
 	@Step("Добавление адресса в группу")
 	public void addAddress(Address address){
 		manager.getNavigationHelper()
-		.openListAdressPage();
-	pages.homePage
-		.selectAddress(address.getFirstName())
-		.settoGroupSelect(address.getGroups())
-		.clickToAddButton();
+			.openListAdressPage();
+		pages.homePage
+			.selectAddress(address.getFirstName())
+			.settoGroupSelect(address.getGroups())
+			.clickToAddButton();
 	
 	}
 	   

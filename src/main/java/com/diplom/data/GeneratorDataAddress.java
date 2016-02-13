@@ -35,7 +35,7 @@ public class GeneratorDataAddress {
 	public static Iterator<Object[]> updateAddressDataGenerate(){
 		List<Object[]> list = new ArrayList<Object[]>();
 		Address editAddress = new Address();
-		editAddress.setFirstName("");
+		editAddress.setFirstName("Титова");
 		Address address = new Address();
 		address.setFirstName("FirstName" + new Random().nextInt(1000000))
 			.setLastName("LastName" + new Random().nextInt(1000000))
@@ -57,10 +57,12 @@ public class GeneratorDataAddress {
 	public static Iterator<Object[]> deleteAddressDataGenerate(){
 		List<Object[]> list = new ArrayList<Object[]>();
 		Address address = new Address();
-		address.setFirstName("");
+		address.setFirstName("Тихонов");
 		list.add(new Object[]{address});
 		return list.iterator();
 	}
+	
+	
 	@DataProvider(name = "addAddressData")
 	public static Iterator<Object[]> addAddressDataGenerate(){
 		List<Object[]> list = new ArrayList<Object[]>();
