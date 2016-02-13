@@ -56,7 +56,6 @@ public class AddressHelper extends DriverBasedHelper{
 			.setBdayField(address.getDayBirthday())
 			.setBmonthField(address.getMounthBirthday())
 			.setByearField(address.getYearBirthday())
-			.setGroupField(address.getGroups())
 			.clickUpdateButton();
 		
 		manager.getNavigationHelper()

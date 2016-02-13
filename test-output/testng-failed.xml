@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [AllTest]">
+  <test name="AllTest(failed)">
     <classes>
+      <class name="com.diplom.GroupTest">
+        <methods>
+          <include name="testUpdateGroup" invocation-numbers="0"/>
+          <include name="init"/>
+          <include name="stop"/>
+        </methods>
+      </class> <!-- com.diplom.GroupTest -->
       <class name="com.diplom.AddressTest">
         <methods>
-          <include name="testAddNewAddress" invocation-numbers="0"/>
-          <include name="testUpdateAddress"/>
+          <include name="testUpdateAddress" invocation-numbers="0"/>
           <include name="init"/>
-          <include name="testDeleteAddress" invocation-numbers="0"/>
-          <include name="stop"/>
         </methods>
       </class> <!-- com.diplom.AddressTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- AllTest(failed) -->
+</suite> <!-- Failed suite [AllTest] -->

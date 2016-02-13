@@ -34,6 +34,9 @@ public class AddGroupPage extends GroupsPage{
 	@FindBy(name = "submit")
 	public Button submitButton;
 	
+	@FindBy(name = "update")
+	public Button updateButton;
+	
 	@Step("Заполнить поле GroupName значением {0}")
 	public AddGroupPage setGroupNameField(String text){
 		groupNameField.clearAndType(text);
@@ -55,6 +58,11 @@ public class AddGroupPage extends GroupsPage{
 	@Step("Нажать кнопку Enter information")
 	public void clickSubmitButton(){
 		submitButton.click();
+	}
+	
+	@Step("Нажать кнопку Update")
+	public void clickUpdateButton(){
+		updateButton.click();
 	}
 	
 	

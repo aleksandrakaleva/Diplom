@@ -25,7 +25,7 @@ public class GroupTest extends TestBase{
 	 
 	@Title("Тест редактирования группы")
 	@Description("Тест редактирования группы")
-	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "updateGroupData")
 	public void testUpdateGroup(Group editGroup, Group group){
 		app.getGroupHelper()
 			.updateGroup(editGroup, group);
@@ -34,7 +34,7 @@ public class GroupTest extends TestBase{
 
 	@Title("Тест удаления группы")
 	@Description("Тест удаления группы")
-	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "newGroupData")
+	@Test(dataProviderClass = GeneratorDataGroup.class, dataProvider = "deleteGroupData")
 	public void testDeleteGroup(Group group){
 		app.getGroupHelper()
 			.deleteGroup(group);

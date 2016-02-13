@@ -57,8 +57,10 @@ public class HomePage extends InternalPage{
 	}
 	@Step("Нажать на кнопку редактирования на контакте со сзначением {0}")
 	public void clickEditButton(String text) {
-		driver.findElement(By.xpath("")).click();
-		pages.addAddressPage.waitPageLoaded();
+		driver.findElement(By
+				.xpath("//*[contains(text(), '"+text+"')]/../td/a[contains(@href, 'edit.php')]")).click();
+		pages.addAddressPage
+			.ensurePageLoaded();
 	}
 	
 }

@@ -40,7 +40,7 @@ public class GroupHelper extends DriverBasedHelper{
 		pages.addGroupPage.setGroupNameField(group.getGroupName())
 			.setGroupHeaderField(group.getGroupHeader())
 			.setGroupFooterFieldField(group.getGroupFooter())
-			.clickSubmitButton();
+			.clickUpdateButton();
 		manager.getNavigationHelper()
 			.openGroupsPage();
 		org.testng.Assert.assertTrue(pages.homePage.isElementPresent(By
