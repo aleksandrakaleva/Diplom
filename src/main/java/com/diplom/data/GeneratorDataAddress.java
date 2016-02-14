@@ -38,7 +38,7 @@ public class GeneratorDataAddress {
 		editAddress.setFirstName("Кузнецова");
 		Address address = new Address();
 		address.setFirstName("Великая")
-			.setLastName("Лидия" + new Random().nextInt(1000000))
+			.setLastName("Лидия")
 			.setAddress("г. Одесса, ул. Академика Воробьева, 13")
 			.setHomeTelephone("6-35-800")
 			.setMobileTelephone("38 096 52 36 485")
