@@ -15,9 +15,9 @@ public class GeneratorDataGroup {
 	public static Iterator<Object[]> newGroupDataGenerate(){
 		List<Object[]> list = new ArrayList<Object[]>();
 		Group group = new Group();
-		group.setGroupName("GroupName" + new Random().nextInt(1000000))
-			.setGroupHeader("GroupHeader" + new Random().nextInt(1000000))
-			.setGroupFooter("GroupFooter" + new Random().nextInt(1000000));
+		group.setGroupName("Приморский район")
+			.setGroupHeader("Сортировка адресов")
+			.setGroupFooter("В зависимости от расположения адреса выбирается район.");
 		list.add(new Object[]{group});
 		return list.iterator();
 	}
@@ -28,9 +28,9 @@ public class GeneratorDataGroup {
 		Group editGroup = new Group();
 		editGroup.setGroupName("Киевский район");
 		Group group = new Group();
-		group.setGroupName("GroupName" + new Random().nextInt(1000000))
-			.setGroupHeader("GroupHeader" + new Random().nextInt(1000000))
-			.setGroupFooter("GroupFooter" + new Random().nextInt(1000000));
+		group.setGroupName("Киевский район")
+			.setGroupHeader("Это один из четырех районов Одессы.")
+			.setGroupFooter("В зависимости от расположения адреса выбирается район.");
 		list.add(new Object[]{editGroup, group});
 		return list.iterator();
 	}
